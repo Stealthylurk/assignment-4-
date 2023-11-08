@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="../favicon_io (1)/favicon.ico">
+</head>
+<body>
+<header class="bg-dark text-light">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand enlarge-on-hover" href="../index.html">
+        <img src="../logo1.png" alt="NewsWorld Logo" height="40">
+        NewsWorld
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sports.html">Sports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="politics.html">Politics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="business.html">Business</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Technology.html">Technology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="entertainment.html">Entertainment</a>
+          </li>
+          <button id="toggle-theme-button">Theme <i class="fa-solid fa-moon"></i></button>
+        </ul>
+      </div>
+    </nav>
+    <div class="search-bar mt-3">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Search</button>
+      </form>
+    </div>
+  </div>
+  <br>
+</header>
+<br>
+
+<h1 style="text-align: center">Sports</h1>
+
+<!-- date -->
+<div id="date-time" style="text-align: center; color: #888888"></div>
+
+<a href="#" class="to-top">
+  <i class="fas fa-chevron-up"></i>
+</a>
+
+<section class="article-section">
+  <article class="article">
+    <a href="sportsArticle/sportarticle2.html">
+      <div class="card">
+        <img src="photos/sport.jpg" class="card-img-top" alt="News Image">
+        <div class="card-body">
+          <h2 class="card-title">Latest News</h2>
+          <p class="card-text"><strong>Europe need four points from Sunday's 12 singles matches against the United States</strong> heh.</p>
+          <p class="card-text"><em>Posted by Azamat on September 29, 2023</em></p>
+        </div>
+      </div>
+    </a>
+  </article>
+</section>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card mt-5">
+        <div class="card-body">
+          <h2 class="card-title">Subscribe to Our Newsletter</h2>
+          <p class="card-text">Stay updated with our latest news and articles!</p>
+          <form id="subscription-form">
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="background-color: #333333">
+              Subscribe <i class="fas fa-envelope"></i> <!-- Font Awesome envelope icon -->
+            </button>
+          </form>
+          <!-- Success Alert -->
+          <div class="alert alert-success mt-3" id="success-alert" style="display: none;">
+            Thank you for subscribing!
+          </div>
+          <!-- Error Alert -->
+          <div class="alert alert-danger mt-3" id="error-alert" style="display: none;">
+            Subscription failed. Please try again.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-light mt-5" style="text-align: center">
+  <div class="container">
+    <br>
+    <p>COPYRIGHT &copy; 2023 Newsletter Site</p>
+    <p>Contacts: +7-771-351-90-74</p>
+    <p>EMAIL: info@newsworld.org</p>
+    <br>
+    <!-- Inside your header or footer -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com/yourpage" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/yourhandle" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/yiromo" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+
+  function getDayOfWeek(dateString) {
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const date = new Date(dateString);
+    return daysOfWeek[date.getDay()];
+  }
+
+
+  document.getElementById("date1").textContent += ` (${getDayOfWeek("September 29, 2023")})`;
+  document.getElementById("date2").textContent += ` (${getDayOfWeek("September 29, 2023")})`;
+  document.getElementById("date3").textContent += ` (${getDayOfWeek("September 29, 2023")})`;
+  document.getElementById("date4").textContent += ` (${getDayOfWeek("September 29, 2023")})`;
+
+  document.getElementById("subscription-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const emailInput = document.getElementById("email");
+    const successAlert = document.getElementById("success-alert");
+    const errorAlert = document.getElementById("error-alert");
+
+    // Simulate subscription success (you can replace this with your subscription logic)
+    const isSubscriptionSuccessful = Math.random() < 0.5;
+
+    if (isSubscriptionSuccessful) {
+      // Show success alert and hide error alert
+      successAlert.style.display = "block";
+      errorAlert.style.display = "none";
+      emailInput.value = ""; // Clear email input on success
+    } else {
+      // Show error alert and hide success alert
+      errorAlert.style.display = "block";
+      successAlert.style.display = "none";
+    }
+  });
+
+  const toTop = document.querySelector(".to-top");
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 100) {
+      toTop.classList.add("active");
+    } else {
+      toTop.classList.remove("active");
+    }
+  })
+
+
+  function updateDateTime() {
+    const dateTimeElement = document.getElementById("date-time");
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleDateString();
+    const formattedTime = currentDate.toLocaleTimeString();
+    dateTimeElement.textContent = `Current Date and Time: ${formattedDate} ${formattedTime}`;
+  }
+
+  setInterval(updateDateTime, 1000);
+
+
+  const UserPreferences = {
+    theme: 'light',
+  };
+
+  function applyTheme() {
+    if (UserPreferences.theme === 'light') {
+      document.body.style.backgroundColor = '#ffffff'; // Light theme background color
+    } else if (UserPreferences.theme === 'dark') {
+      document.body.style.backgroundColor = '#383c44'; // Dark theme background color
+    }
+  }
+
+  // Initial theme application
+  applyTheme();
+
+
+  const toggleThemeButton = document.getElementById('toggle-theme-button');
+
+  toggleThemeButton.addEventListener('click', function () {
+    // Toggle between 'light' and 'dark' themes
+    UserPreferences.theme = UserPreferences.theme === 'light' ? 'dark' : 'light';
+    applyTheme(); // Apply the selected theme
+  });
+</script>
+</body>
+</html>
+

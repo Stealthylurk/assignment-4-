@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/x-icon" href="../../favicon_io (1)/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header class="bg-dark text-light">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="../../index.html">
+        <img src="../../logo1.png" alt="NewsWorld Logo" height="40">
+        NewsWorld
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../sports.html">Sports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../politics.html">Politics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../business.html">Business</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Technology.html">Technology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../entertainment.html">Entertainment</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="search-bar mt-3">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Search</button>
+      </form>
+    </div>
+  </div>
+  <br>
+</header>
+<a href="#" class="to-top">
+  <i class="fas fa-chevron-up"></i>
+</a>
+
+<br>
+<div class="reading-progress">
+  <div class="progress">
+    <div class="progress-bar" id="reading-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+      <i class="fas fa-arrow-down"></i>
+    </div>
+  </div>
+</div>
+<br>
+
+<article class="article">
+  <h1>Epic Games to Cut Jobs and Sell Bandcamp</h1>
+
+  <p>Published on October 1, 2023</p>
+
+  <img src="../photos/fortnite.jpg" alt="Epic Games Logo">
+
+  <p>Epic Games, the creator of the wildly popular video game Fortnite, has announced a significant restructuring plan that includes cutting 870 jobs, which accounts for around 16% of its workforce. Additionally, the company has decided to sell Bandcamp, an online music platform it acquired just last year.</p>
+
+  <p>In a memo addressed to its staff, Epic Games expressed its need to reduce costs, as the company has been consistently "spending way more money than we earn." CEO Tim Sweeney emphasized that these layoffs are necessary to stabilize the company's finances.</p>
+
+  <p>"Epic folks around the world have been making ongoing efforts to reduce costs, including moving to net zero hiring and cutting operating spend on things like marketing and events," said Sweeney. "But we still ended up far short of financial sustainability."</p>
+
+  <p>Regarding the sale of Bandcamp, Sweeney mentioned that it would be joining Songtradr, a music marketplace company that supports artists. Bandcamp was known for offering independent artists a platform to earn a better return on their music compared to streaming services. However, Epic Games' acquisition of Bandcamp in 2022 led to skepticism about how the two businesses would align. This recent announcement seems to confirm those doubts.</p>
+
+  <p>It's worth noting that Epic Games has a global presence, including offices in the UK, although specific details about where the job cuts will occur have not been disclosed. Sweeney assured that these layoffs would not impact the company's core development or essential business areas. Approximately two-thirds of the job cuts are expected to affect teams outside of core development.</p>
+
+  <p>Epic Games is also known for its gaming engine, Unreal Engine, which powers successful titles like Fortnite and Gears of War. Fortnite, in particular, boasts a massive user base with an estimated 400 million registered players.</p>
+</article>
+
+
+
+<footer class="bg-dark text-light mt-5" style="text-align: center">
+  <div class="container">
+    <br>
+    <p>COPYRIGHT &copy; 2023 Newsletter Site</p>
+    <p>Contacts: +7-771-351-90-74</p>
+    <p>EMAIL: info@newsworld.org</p>
+    <br>
+    <!-- Inside your header or footer -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com/yourpage" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/yourhandle" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/yiromo" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const article = document.querySelector(".article");
+    const progressBar = document.getElementById("reading-progress-bar");
+
+    let isReading = false;
+
+    window.addEventListener("scroll", function () {
+      if (!isReading) {
+        isReading = true;
+        progressBar.style.display = "block";
+      }
+
+      const scrollPosition = window.scrollY;
+      const articleHeight = article.clientHeight - window.innerHeight;
+      const progress = (scrollPosition / articleHeight) * 100;
+
+      progressBar.style.width = `${progress}%`;
+
+    });
+  });
+
+  const toTop = document.querySelector(".to-top");
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 100) {
+      toTop.classList.add("active");
+    } else {
+      toTop.classList.remove("active");
+    }
+  })
+
+
+
+
+
+  function getDayOfWeek(dateString) {
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const date = new Date(dateString);
+    return daysOfWeek[date.getDay()];
+  }
+
+
+  document.getElementById("date1").textContent += ` (${getDayOfWeek("September 29, 2023")})`;
+  document.getElementById("date2").textContent += ` (${getDayOfWeek("September 29, 2023")})`;
+  document.getElementById("date3").textContent += ` (${getDayOfWeek("September 29, 2023")})`;
+  document.getElementById("date4").textContent += ` (${getDayOfWeek("September 29, 2023")})`;
+
+  document.getElementById("subscription-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const emailInput = document.getElementById("email");
+    const successAlert = document.getElementById("success-alert");
+    const errorAlert = document.getElementById("error-alert");
+
+    // Simulate subscription success (you can replace this with your subscription logic)
+    const isSubscriptionSuccessful = Math.random() < 0.5;
+
+    if (isSubscriptionSuccessful) {
+      // Show success alert and hide error alert
+      successAlert.style.display = "block";
+      errorAlert.style.display = "none";
+      emailInput.value = ""; // Clear email input on success
+    } else {
+      // Show error alert and hide success alert
+      errorAlert.style.display = "block";
+      successAlert.style.display = "none";
+    }
+  });
+</script>
+</body>
+</html>
+
